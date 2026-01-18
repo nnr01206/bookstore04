@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>街角書店選書服務 | 選擇您的選書方式</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600&family=Noto+Sans+TC:wght@400;500&display=swap" rel="stylesheet" />
+
+    <style>
+        /* 基本樣式重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 沿用 PT01 的字體設定 */
+        body {
+            font-family: "Noto Sans TC", sans-serif;
+            background-color: #f8f9fa; /* 稍微柔和的背景色 */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* 確保頁腳能在內容不足時置底 */
+            color: #333;
+        }
+
+        h1, h2, h3 {
+            font-family: "Noto Serif TC", serif;
+            color: #1a1a1a;
+        }
+
+        /* 主要容器 */
+        .container {
+            max-width: 800px;
+            margin: 2rem auto; /* 上下留白，左右自動置中 */
+            padding: 0 1rem;  /* 左右內邊距 */
+            flex-grow: 1;     /* 讓容器填滿剩餘空間 */
+            text-align: center; /* 內容置中 */
+        }
+
+        /* 標題 */
+        .main-title {
+            font-size: 2rem; /* 稍大字體 */
+            margin-bottom: 1rem;
+            color: #007979; /* 類似 PT01 的主色調 */
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            color: #555;
+        }
+
+        /* 選項容器 */
+        .options-container {
+            display: flex;
+            flex-direction: column; /* 手機優先，垂直排列 */
+            gap: 1.5rem; /* 選項間距 */
+            align-items: center; /* 水平置中 */
+        }
+
+        /* 選項卡片/按鈕 */
+        .option-card {
+            display: block; /* 讓 a 標籤可以設定寬高 */
+            width: 100%;
+            max-width: 400px; /* 設定最大寬度 */
+            padding: 1.5rem 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+            text-decoration: none;
+            color: inherit; /* 繼承父層顏色 */
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .option-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .option-title {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            color: #005F5F; /* 深一點的主色調 */
+        }
+
+        .option-description {
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        /* 頁腳 (與 PT01 類似) */
+        .footer {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: #e9ecef; /* 淺灰色背景 */
+            color: #6c757d; /* 灰色文字 */
+            margin-top: 2rem; /* 與主內容區隔 */
+            font-size: 0.9rem;
+        }
+
+        /* 響應式設計：在中等螢幕以上改為水平排列 */
+        @media (min-width: 640px) {
+            .options-container {
+                flex-direction: row; /* 水平排列 */
+                justify-content: center; /* 水平置中 */
+                align-items: stretch; /* 讓卡片等高 */
+            }
+            .option-card {
+                 width: 45%; /* 水平排列時各佔一些寬度 */
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="main-title">歡迎來到街角書店選書服務</h1>
+        <p class="subtitle">請選擇您希望如何找到下一本旅途中的讀伴：</p>
+
+        <div class="options-container">
+            <a href="街角書店數位轉型PT01.html" class="option-card"> <h2 class="option-title">我自己挑選書籍</h2>
+                <p class="option-description">瀏覽我們為您準備的精選書籍，點擊封面查看介紹，並選擇您心儀的那一本。</p>
+            </a>
+
+            <a href="YOUR_PROTOTYPE3_FORM_URL_HERE" class="option-card"> <h2 class="option-title">請書店為我推薦</h2>
+                <p class="option-description">花幾分鐘告訴我們您的閱讀喜好、最近的心情或感興趣的主題，讓我們為您挑選最適合的驚喜書。</p>
+            </a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2025 街角書店 Carreau de Réverie</p>
+    </footer>
+
+    <script>
+        // 目前這個頁面不需要 JavaScript，但保留 script 標籤以便未來擴充
+        console.log("Prototype 4 loaded - Choice Page");
+
+        // LIFF 初始化代碼會放在這裡 (如果需要在此頁面就取得用戶資訊)
+        // import liff from '@line/liff';
+        // liff.init({ liffId: "YOUR_LIFF_ID" }).then(() => { ... });
+    </script>
+
+</body>
+</html>
